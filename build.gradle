@@ -1,0 +1,67 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+
+
+    ext {
+        kotlin_version = '1.3.72'
+        archLifecycleVersion = '1.1.1'
+        coroutine_version = '1.3.7'
+        gradleVersion = '4.0.1'
+        navigationVersion = '1.0.0-alpha08'
+        dataBindingCompilerVersion = gradleVersion // Always need to be the same.
+        androidXVersion1_0_0 = "1.0.0"
+        androidXVersion1_0_1 = "1.0.1"
+        androidXVersion1_1_0 = "1.1.0"
+        androidXVersion1_2_0 = "1.2.0"
+        androidXVersion1_3_0 = "1.3.0"
+        androidXVersion1_5_0 = "1.5.0"
+        androidXVersion2_0_1 = "2.0.1"
+        androidXVersion2_0_4 = "2.0.4"
+        androidXVersion2_2_0 = "2.2.0"
+        androidXVersion2_2_5 = "2.2.5"
+        androidXVersion2_3_5 = "2.3.5"
+        androidXDependencies = [
+                lifecycleExtension      : "androidx.lifecycle:lifecycle-extensions:$androidXVersion2_2_0",
+                lifecycleLiveDataKTX    : "androidx.lifecycle:lifecycle-livedata-ktx:$androidXVersion2_2_0",
+                lifecycleRuntimeKTX     : "androidx.lifecycle:lifecycle-runtime-ktx:$androidXVersion2_2_0",
+                lifecycleViewModelKTX   : "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidXVersion2_2_0",
+                navigationFragment      : "androidx.navigation:navigation-fragment:$androidXVersion2_3_5",
+                navigationFragmentKTX   : "androidx.navigation:navigation-fragment-ktx:$androidXVersion2_3_5",
+                navigationUI            : "androidx.navigation:navigation-ui:$androidXVersion2_3_5",
+                navigationUIKTX         : "androidx.navigation:navigation-ui-ktx:$androidXVersion2_3_5",
+                recyclerView            : "androidx.recyclerview:recyclerview:$androidXVersion1_1_0",
+                roomCompiler            : "androidx.room:room-compiler:$androidXVersion2_2_5",
+                roomKTX                 : "androidx.room:room-ktx:$androidXVersion2_2_5",
+                roomRuntime             : "androidx.room:room-runtime:$androidXVersion2_2_5",
+                roomRxJava2             : "androidx.room:room-rxjava2:$androidXVersion2_2_5",
+                sqlite                  : "androidx.sqlite:sqlite:$androidXVersion2_0_1"
+
+        ]
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.38.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

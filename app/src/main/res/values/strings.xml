@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">dyario</string>
+    <string name="api_key">12026c84906b4c23b7e21b09b335aaa0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  Loading  -->
+    <string name="loading">Loading...</string>
+</resources>
